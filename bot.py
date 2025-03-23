@@ -3,7 +3,7 @@ import logging
 import json
 import os
 
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher, types, F
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
 from aiogram.enums.content_type import ContentType
 from aiogram.filters import CommandStart
@@ -17,7 +17,7 @@ dp = Dispatcher()
 
 @dp.message()
 async def start(message: types.Message):
-    webAppInfo = types.WebAppInfo(url="https://tgminiapp-esteddy.amvera.io")
+    webAppInfo = types.WebAppInfo(url="https://esteddy.github.io/mini-app-project/")
     builder = ReplyKeyboardBuilder()
     builder.add(types.KeyboardButton(text='Отправить данные', web_app=webAppInfo))
     
