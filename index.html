@@ -70,8 +70,8 @@
 </head>
 <body>
     <div class="Main">
-        <h1>Тестовое приложеение</h1>
-        <img src="{{ url_for('static', filename='bot.png') }}" alt="123">
+        <h1>Текстовое приложеение</h1>
+        <img src="{{ url_for('static', filename='bot.webp') }}" alt="123">
         <p></p>
         <button class="btn f-btn">Текст отправки данных</button>
     </div>
@@ -106,6 +106,7 @@
             }
 
             tg.sendData(JSON.stringify(data));
+            tg.close();
         });
     </script>
 </body>
